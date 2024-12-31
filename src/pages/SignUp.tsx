@@ -8,7 +8,14 @@ import { ISignup } from '@/types/signup';
 import { Button } from "@/components/ui/button"
 import { Link } from 'react-router';
 import { Eye, EyeClosed } from 'lucide-react';
-
+import {
+    Breadcrumb,
+    BreadcrumbItem,
+    BreadcrumbLink,
+    BreadcrumbList,
+    BreadcrumbPage,
+    BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
 
 
 const SignUp = () => {
@@ -30,6 +37,19 @@ const SignUp = () => {
         <div className="flex flex-wrap w-full">
             <div className="w-full flex items-center md:w-1/2 md:min-h-screen bg-white login-left p-5 lg:p-20 xl:p-50 2xl:px-52 2xl:py-10">
                 <div className='w-full'>
+                    <Breadcrumb className='mb-10'>
+                        <BreadcrumbList>
+                            <BreadcrumbItem>
+                                <BreadcrumbPage>Get Started</BreadcrumbPage>
+                            </BreadcrumbItem>
+                            <BreadcrumbSeparator />
+                            <BreadcrumbItem>
+                                <BreadcrumbLink>Company Details</BreadcrumbLink>
+                            </BreadcrumbItem>
+                        </BreadcrumbList>
+                    </Breadcrumb>
+
+
                     <h1 className="font-semibold text-3xl text-darkBlue">Sign Up</h1>
                     <div className='mt-2 mb-10 text-darkBlue'>Create your account by entering your details.</div>
                     <form onSubmit={handleSubmit(onSubmit)}>
