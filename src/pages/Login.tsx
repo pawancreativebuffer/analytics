@@ -80,7 +80,7 @@ const Login = () => {
                             </div>
 
                             <div className="w-full md:w-1/2 text-end">
-                                <Link to={`#`} className='text-sm underline text-darkBlue'>Forgot Password</Link>
+                                <Link to={`forgot-password`} className='text-sm underline text-darkBlue'>Forgot Password</Link>
                             </div>
                         </div>
 
