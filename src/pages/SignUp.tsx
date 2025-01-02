@@ -16,11 +16,13 @@ import {
     BreadcrumbPage,
     BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
+import { useNavigate } from 'react-router-dom';
 
 
 const SignUp = () => {
 
-    const [showPassword, setShowPassword] = useState(false)
+    const navigate = useNavigate();
+    const [showPassword, setShowPassword] = useState<boolean>(false)
 
     const { control, handleSubmit, formState } = useForm({
         defaultValues: {
@@ -30,7 +32,10 @@ const SignUp = () => {
             password: ""
         }
     });
-    const onSubmit = (data: ISignup) => { console.log(data); }
+    const onSubmit = (data: ISignup) => {
+        console.log(data)
+        navigate('/company-details');
+    }
 
 
     return (

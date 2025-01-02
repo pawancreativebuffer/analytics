@@ -15,7 +15,7 @@ import { Eye, EyeClosed } from 'lucide-react';
 
 const Login = () => {
 
-    const [showPassword, setShowPassword] = useState(false)
+    const [showPassword, setShowPassword] = useState<boolean>(false)
 
     const { control, handleSubmit, formState } = useForm({
         defaultValues: {
