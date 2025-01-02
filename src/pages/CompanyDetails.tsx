@@ -162,7 +162,13 @@ const CompanyDetails = () => {
                             <label className='block mb-1 font-medium text-darkBlue mt-8'>Your Website</label>
                             <Controller
                                 name="websiteUrl"
-                                rules={{ required: 'Website is required' }}
+                                rules={{
+                                    required: 'Website is required',
+                                    pattern: {
+                                        value: /^(https?:\/\/)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,7}(\/[^\s]*)?$/,
+                                        message: 'Please enter a valid website URL',
+                                    },
+                                }}
                                 control={form1.control}
                                 render={({ field }) => <Input {...field} placeholder="Enter your company website" type='text' />}
                             />
@@ -200,7 +206,13 @@ const CompanyDetails = () => {
                             <label className='block mb-1 font-medium text-darkBlue mt-8'>Phone Number</label>
                             <Controller
                                 name="phoneNumber"
-                                rules={{ required: 'Phone number is required' }}
+                                rules={{
+                                    required: 'Phone number is required',
+                                    pattern: {
+                                        value: /^[0-9]+$/,
+                                        message: 'Phone number must contain only numbers',
+                                    },
+                                }}
                                 control={form1.control}
                                 render={({ field }) => <Input {...field} placeholder="Enter phone number" type='text' />}
                             />
@@ -238,7 +250,13 @@ const CompanyDetails = () => {
                             <label className='block mb-1 font-medium text-darkBlue mt-8'>Your Website</label>
                             <Controller
                                 name="websiteUrl2"
-                                rules={{ required: 'Website is required' }}
+                                rules={{
+                                    required: 'Website is required',
+                                    pattern: {
+                                        value: /^(https?:\/\/)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,7}(\/[^\s]*)?$/,
+                                        message: 'Please enter a valid website URL',
+                                    },
+                                }}
                                 control={form2.control}
                                 render={({ field }) => <Input {...field} placeholder="Enter your company website" type='text' />}
                             />
@@ -251,7 +269,13 @@ const CompanyDetails = () => {
                             <label className='block mb-1 font-medium text-darkBlue mt-8'>Phone Number</label>
                             <Controller
                                 name="phoneNumber2"
-                                rules={{ required: 'Phone number is required' }}
+                                rules={{
+                                    required: 'Phone number is required',
+                                    pattern: {
+                                        value: /^[0-9]+$/,
+                                        message: 'Phone number must contain only numbers',
+                                    },
+                                }}
                                 control={form2.control}
                                 render={({ field }) => <Input {...field} placeholder="Enter phone number" type='text' />}
                             />
