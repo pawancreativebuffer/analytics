@@ -17,7 +17,7 @@ const Login = () => {
 
     const [showPassword, setShowPassword] = useState<boolean>(false)
 
-    const { control, handleSubmit, formState } = useForm({
+    const { control, handleSubmit, formState } = useForm<ILogin>({
         defaultValues: {
             email: "",
             password: ""

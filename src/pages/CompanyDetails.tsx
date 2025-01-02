@@ -19,13 +19,13 @@ const CompanyDetails = () => {
 
     const [showForm, setShowForm] = useState<number>(0);
 
-    const form = useForm({
+    const form = useForm<IPlatformDetail>({
         defaultValues: {
             platformUse: "",
         }
     });
 
-    const form1 = useForm({
+    const form1 = useForm<ICompanyDetail>({
         defaultValues: {
             companyName: "",
             websiteUrl: "",
@@ -34,7 +34,7 @@ const CompanyDetails = () => {
         }
     });
 
-    const form2 = useForm({
+    const form2 = useForm<ICompanyDetail2>({
         defaultValues: {
             companyName2: "",
             websiteUrl2: "",

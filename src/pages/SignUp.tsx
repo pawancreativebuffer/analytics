@@ -24,7 +24,7 @@ const SignUp = () => {
     const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState<boolean>(false)
 
-    const { control, handleSubmit, formState } = useForm({
+    const { control, handleSubmit, formState } = useForm<ISignup>({
         defaultValues: {
             firstName: "",
             lastName: "",
