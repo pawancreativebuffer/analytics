@@ -14,9 +14,10 @@ const UpdatePassword = () => {
     const [showPassword, setShowPassword] = useState<boolean>(false)
     const [showConfirmPassword, setShowConfirmPassword] = useState<boolean>(false)
 
-    const { control, handleSubmit, formState } = useForm<IUpdatePassword>({
+    const { control, handleSubmit, formState, getValues } = useForm<IUpdatePassword>({
         defaultValues: {
-            password: ""
+            password: "",
+            confirmPassword: ""
         }
     });
     const onSubmit = (data: IUpdatePassword) => { console.log(data); }
@@ -60,7 +61,11 @@ const UpdatePassword = () => {
                         <div className="relative">
                             <Controller
                                 name="confirmPassword"
-                                rules={{ required: 'Confirm Password is required' }}
+                                rules={{
+                                    required: 'Confirm Password is required',
+                                    validate: (value) =>
+                                        value === getValues('password') || 'Passwords must match',
+                                }}
                                 control={control}
                                 render={({ field }) => <Input {...field} placeholder="Confirm Password" type={showConfirmPassword ? 'text' : 'password'} />}
                             />
