@@ -87,7 +87,7 @@ const UpdatePassword = () => {
                         }
 
 
-                        <Button className='w-full bg-blue-700 hover:bg-blue-800 focus:outline-none mt-12' type='submit'>Update Password</Button>
+                        <Button className='w-full bg-blue-700 hover:bg-blue-800 focus:outline-none mt-8' type='submit'>Update Password</Button>
                     </form>
                 </div>
             </div>
