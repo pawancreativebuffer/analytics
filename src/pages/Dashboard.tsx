@@ -1,8 +1,12 @@
 import React from 'react'
+import PanelSidebar from '@/layouts/PanelSidebar'
+
 
 const Dashboard = () => {
     return (
-        <div>Dashboard</div>
+        <>
+            <PanelSidebar />
+        </>
     )
 }
 

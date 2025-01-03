@@ -13,14 +13,11 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/company-details" element={<CompanyDetails />} />
-        <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/update-password" element={<UpdatePassword />} />
-        <Route path="dashboard" element={<Dashboard />}>
-          {/* <Route index element={<RecentActivity />} />
-          <Route path="project/:id" element={<Project />} /> */}
-        </Route>
+        <Route path="signup" element={<SignUp />} />
+        <Route path="company-details" element={<CompanyDetails />} />
+        <Route path="forgot-password" element={<ForgotPassword />} />
+        <Route path="update-password" element={<UpdatePassword />} />
+        <Route path="dashboard" element={<Dashboard />} />
       </Routes>
 
     </>
